@@ -15,6 +15,26 @@
 <div id="app" class="page">
   <h1><a href="https://github.com/mariomka/vue-datetime">vue-datetime demo</a></h1>
 
+  <h2>Date -
+    <p>Disable dates - 2023-12-25. 2024-01-01</p>
+    <p>Disable Week days (6 = Saturday, 7/0 = Sunday)</p>
+  </h2>
+
+  <div class="example">
+    <div class="example-inputs">
+      <datetime v-model="date" :disable-dates="['2023-12-25','2024-01-01']" :disable-week-days="[6,7]"></datetime>
+
+      <div class="values">
+        <p>
+          <strong>Value:</strong> {{ date }}
+        </p>
+      </div>
+    </div>
+    <div class="example-code">
+      <pre><code>&#x3C;datetime v-model=&#x22;date&#x22; :disable-dates=&#x22;['2023-12-25','2024-01-01']&#x22; :disable-week-days=&#x22;[6,7]&#x22;&#x3E;&#x3C;/datetime&#x3E;</code></pre>
+    </div>
+  </div>
+
   <h2>Date</h2>
 
   <div class="example">

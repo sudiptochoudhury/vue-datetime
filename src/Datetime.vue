@@ -26,6 +26,8 @@
           :minute-step="minuteStep"
           :min-datetime="popupMinDatetime"
           :max-datetime="popupMaxDatetime"
+          :disable-week-days="disableWeekDays"
+          :disable-dates="disableDates"
           @confirm="confirm"
           @cancel="cancel"
           :auto="auto"
@@ -142,6 +144,14 @@ export default {
     backdropClick: {
       type: Boolean,
       default: true
+    },
+    disableWeekDays: {
+      type: [String, Array],
+      default: null
+    },
+    disableDates: {
+      type: [String, Array],
+      default: ''
     }
   },
 

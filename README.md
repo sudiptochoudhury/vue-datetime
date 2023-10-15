@@ -1,5 +1,3 @@
-**🚨 THIS PROJECT IS NO LONGER MAINTAINED 🚨** [read more](https://github.com/mariomka/vue-datetime/issues/276)
-
 # vue-datetime
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)

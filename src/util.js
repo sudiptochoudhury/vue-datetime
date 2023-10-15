@@ -29,9 +29,46 @@ export function monthDays (year, month, weekStart) {
     )
 }
 
-export function monthDayIsDisabled (minDate, maxDate, year, month, day) {
-  const date = DateTime.fromObject({ year, month, day, zone: 'UTC' })
+export function isWeekDayIsDisabled (date, disableWeekDays) {
+  if (!disableWeekDays || !disableWeekDays.length) {
+    return false
+  }
+  const names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+  const weekDay = date.weekday % 7
+  const items = typeof disableWeekDays === 'string'
+    ? disableWeekDays.split(',').map(v => v.toLowerCase().trim()) : disableWeekDays
+  return items.some(item => {
+    if (typeof (1 * item) === 'number') {
+      item = item % 7
+      if (weekDay === item) {
+        return true
+      }
+    } else {
+      item = item.substring(0, 3)
+      if (item === names[weekDay]) {
+        return true
+      }
+    }
+  })
+}
 
+export function isDateIsDisabled (date, disableDates) {
+  if (!disableDates || !disableDates.length) {
+    return false
+  }
+  const dateString = date.toISODate()
+  const items = typeof disableDates === 'string' ? disableDates.split(',').map(v => v.trim()) : disableDates
+  return items.includes(dateString)
+}
+
+export function monthDayIsDisabled (minDate, maxDate, year, month, disableWeekDays, disableDates, day) {
+  const date = DateTime.fromObject({ year, month, day, zone: 'UTC' })
+  if (isWeekDayIsDisabled(date, disableWeekDays)) {
+    return true
+  }
+  if (isDateIsDisabled(date, disableDates)) {
+    return true
+  }
   minDate = minDate ? startOfDay(minDate.setZone('UTC', { keepLocalTime: true })) : null
   maxDate = maxDate ? startOfDay(maxDate.setZone('UTC', { keepLocalTime: true })) : null
 

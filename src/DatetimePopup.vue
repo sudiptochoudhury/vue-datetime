@@ -28,6 +28,8 @@
           :min-date="minDatetime"
           :max-date="maxDatetime"
           :week-start="weekStart"
+          :disable-week-days="disableWeekDays"
+          :disable-dates="disableDates"
       ></datetime-calendar>
       <datetime-time-picker
           v-if="step === 'time'"
@@ -122,6 +124,14 @@ export default {
     },
     title: {
       type: String
+    },
+    disableWeekDays: {
+      type: [String, Array],
+      default: null
+    },
+    disableDates: {
+      type: [String, Array],
+      default: ''
     }
   },
 
