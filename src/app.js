@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import {DateTime as LuxonDateTime, Settings as LuxonSettings} from 'luxon'
+import { DateTime as LuxonDateTime, Settings as LuxonSettings } from 'luxon'
 import Datetime from '../../dist/vue-datetime-extended'
 import '../../dist/vue-datetime-extended.css'
 import './app.css'

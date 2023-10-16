@@ -7648,7 +7648,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * vue-datetime-extended v1.0.0
+ * vue-datetime-extended v1.0.1
  * (c) 2023 Sudipto Choudhury
  * Released under the MIT License.
  */
@@ -8670,8 +8670,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   };
 
   function plugin(Vue) {
-    Vue.component('datetime', Datetime);
-    Vue.component('datetime-popup', DatetimePopup);
+    Vue.component('datetime-extended', Datetime);
+    Vue.component('datetime-extended-popup', DatetimePopup);
   }
 
   // Install by default if using the script tag
@@ -8679,7 +8679,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     window.Vue.use(plugin);
   }
 
-  var version = '1.0.0';
+  var version = '1.0.1';
 
   exports['default'] = plugin;
   exports.Datetime = Datetime;
