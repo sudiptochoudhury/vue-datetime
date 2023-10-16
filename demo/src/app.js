@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { DateTime as LuxonDateTime, Settings as LuxonSettings } from 'luxon'
-import {Datetime} from '../../dist/vue-datetime-extended'
+import { Datetime } from '../../dist/vue-datetime-extended'
 import '../../dist/vue-datetime-extended.css'
 import './app.css'
 
@@ -15,7 +15,7 @@ const datetime13 = mainDate.toISO()
 
 new Vue({
   el: '#app',
-  components: {Datetime},
+  components: { Datetime },
   data () {
     return {
       time,
