@@ -7648,7 +7648,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * vue-datetime-extended v1.0.3
+ * vue-datetime-extended v1.0.4
  * (c) 2023 Sudipto Choudhury
  * Released under the MIT License.
  */
@@ -8679,7 +8679,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     window.Vue.use(plugin);
   }
 
-  var version = '1.0.3';
+  var version = '1.0.4';
 
   exports['default'] = plugin;
   exports.Datetime = Datetime;
@@ -19488,8 +19488,6 @@ __webpack_require__(7);
 __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_luxon.Settings.defaultLocale = 'es';
 
 var mainDate = _luxon.DateTime.local();
 var date = mainDate.startOf('day').toISO();
