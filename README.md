@@ -1,32 +1,32 @@
-# vue-datetime
+# vue-datetime-extended
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Latest Version on NPM](https://img.shields.io/npm/v/vue-datetime.svg?style=flat-square)](https://npmjs.com/package/vue-datetime)
 [![npm](https://img.shields.io/npm/dt/vue-datetime.svg?style=flat-square)](https://www.npmjs.com/package/vue-datetime)
 [![Vue 2.x](https://img.shields.io/badge/vue-2.x-brightgreen.svg?style=flat-square)](https://vuejs.org)
 [![Build](https://img.shields.io/travis/mariomka/vue-datetime/v1.x.svg?style=flat-square)](https://travis-ci.org/mariomka/vue-datetime)
-[![Coverage](https://img.shields.io/codecov/c/github/mariomka/vue-datetime/v1.x.svg?style=flat-square)](https://codecov.io/gh/mariomka/vue-datetime)
+[![Coverage](https://img.shields.io/codecov/c/github/sudiptochoudhury/vue-datetime/v1.x.svg?style=flat-square)](https://codecov.io/gh/sudiptochoudhury/vue-datetime)
 
 > Mobile friendly datetime picker for Vue. Supports date, datetime and time modes, i18n and more.
 
 ## Demo
 
-**[Go to demo](http://mariomka.github.io/vue-datetime)**.
+**[Go to demo](http://sudiptochoudhury.github.io/vue-datetime)**.
 
-[![demo](https://raw.githubusercontent.com/mariomka/vue-datetime/v1.x/demo/demo.gif)](http://mariomka.github.io/vue-datetime)
+[![demo](https://raw.githubusercontent.com/mariomka/vue-datetime/v1.x/demo/demo.gif)](http://sudiptochoudhury.github.io/vue-datetime)
 
 ## Installation
 
 ### Bundler (Webpack, Rollup...)
 
 ```bash
-yarn add luxon vue-datetime weekstart
+yarn add luxon vue-datetime-extended weekstart
 ```
 
 Or
 
 ```bash
-npm install --save luxon vue-datetime weekstart
+npm install --save luxon vue-datetime-extended weekstart
 ```
 
 **weekstart** is optional, is used to get the first day of the week.
@@ -35,9 +35,9 @@ npm install --save luxon vue-datetime weekstart
 
 ```js
 import Vue from 'vue'
-import { Datetime } from 'vue-datetime'
+import { Datetime } from 'vue-datetime-extended'
 // You need a specific loader for CSS files
-import 'vue-datetime/dist/vue-datetime.css'
+import 'vue-datetime-extended/dist/vue-datetime-extended.css'
 
 Vue.use(Datetime)
 ```
@@ -47,40 +47,40 @@ Vue.use(Datetime)
 ##### Global
 
 ```js
-import { Datetime } from 'vue-datetime';
+import { Datetime } from 'vue-datetime-extended';
 
-Vue.component('datetime', Datetime);
+Vue.component('datetime-extended', Datetime);
 ```
 
 ##### Local
 
 ```js
-import { Datetime } from 'vue-datetime';
+import { Datetime } from 'vue-datetime-extended';
 
 Vue.extend({
   template: '...',
   components: {
-    datetime: Datetime
+    'datetime-extended': Datetime
   }
 });
 ```
 
 ### Browser
 
-Download vue, luxon, weekstart and vue-datetime or use a CDN like unpkg.
+Download vue, luxon, weekstart and vue-datetime-extended or use a CDN like unpkg.
 
 ```html
-<link rel="stylesheet" href="vue-datetime.css"></link>
+<link rel="stylesheet" href="vue-datetime-extended.css"></link>
 <script src="vue.js"></script>
 <script src="luxon.js"></script>
 <script src="weekstart.js"></script>
-<script src="vue-datetime.js"></script>
+<script src="vue-datetime-extended.js"></script>
 ```
 
-The component registers itself automatically as `<datetime>`. If you want to use a different name then register it explicitly:
+The component registers itself automatically as `<datetime-extended>`. If you want to use a different name then register it explicitly:
 
 ```js
-Vue.component('vue-datetime', window.VueDatetime.Datetime);
+Vue.component('vue-datetime', window.VueDatetimeExtended.Datetime);
 ```
 
 
@@ -91,7 +91,7 @@ Vue.component('vue-datetime', window.VueDatetime.Datetime);
 ### Minimal
 
 ```html
-<datetime v-model="date"></datetime>
+<datetime-extended v-model="date"></datetime-extended>
 ```
 
 ## Setup
@@ -121,6 +121,9 @@ flow | `Array` | Depends of *type* | Customize steps flow, steps available: time
 title | `String` | `''` | Popup title.
 hide-backdrop | `Boolean` | `false` | Show/Hide backdrop.
 backdrop-click | `Boolean` | `true` | Enable/Disable backdrop click to cancel (outside click).
+
+disable-week-days | `String` or `Array` | `''` | Disable weekdays 0-6 (Sun-Sat) or 1-7 (Mon-Sun) or week day names (English). Can be comma-separated string e.g., `"6,7"` or array `[6,7]`.
+disable-days | `String` or `Array` | `''` | Disable certain dates. Each date must be in `yyyy-mm-dd` format. Can be comma-separated string or array of dates e.g., `"2023-12-25,2024-01-01"` or `["2023-12-25", "2024-01-01"]`.
 
 Input inherits all props not defined above but `style` and `class` will be inherited by root element. [See inheritAttrs option](https://vuejs.org/v2/api/#inheritAttrs)
 

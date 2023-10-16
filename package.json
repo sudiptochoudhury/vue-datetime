@@ -1,6 +1,6 @@
 {
   "name": "vue-datetime-extended",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Mobile friendly datetime picker for Vue. Supports date, datetime and time modes, i18n and disabling dates.",
   "keywords": [
     "datetime",
@@ -10,11 +10,11 @@
     "vue"
   ],
   "author": "Sudipto Choudhury <mail@sudipto.net>",
-  "main": "dist/vue-datetime.common.js",
-  "module": "dist/vue-datetime.esm.js",
-  "browser": "dist/vue-datetime.js",
-  "unpkg": "dist/vue-datetime.js",
-  "style": "dist/vue-datetime.css",
+  "main": "dist/vue-datetime-extended.common.js",
+  "module": "dist/vue-datetime-extended.esm.js",
+  "browser": "dist/vue-datetime-extended.js",
+  "unpkg": "dist/vue-datetime-extended.js",
+  "style": "dist/vue-datetime-extended.css",
   "files": [
     "dist",
     "src"
@@ -144,7 +144,7 @@
     "url": "git+https://github.com/sudiptochoudhury/vue-datetime.git"
   },
   "bugs": {
-    "url": "https://github.com/mariomka/vue-datetime/issues"
+    "url": "https://github.com/sudiptochoudhury/vue-datetime/issues"
   },
   "homepage": "https://github.com/sudiptochoudhury/vue-datetime#readme",
   "license": {
