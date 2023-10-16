@@ -1,6 +1,11 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
+#### [v1.0.4]
+> 16 Oct 2023
+- Fix demo
+
+
 #### [v1.0.3]
 > 16 Oct 2023
 - Fix demo
