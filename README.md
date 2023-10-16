@@ -121,7 +121,6 @@ flow | `Array` | Depends of *type* | Customize steps flow, steps available: time
 title | `String` | `''` | Popup title.
 hide-backdrop | `Boolean` | `false` | Show/Hide backdrop.
 backdrop-click | `Boolean` | `true` | Enable/Disable backdrop click to cancel (outside click).
-
 disable-week-days | `String` or `Array` | `''` | Disable weekdays 0-6 (Sun-Sat) or 1-7 (Mon-Sun) or week day names (English). Can be comma-separated string e.g., `"6,7"` or array `[6,7]`.
 disable-days | `String` or `Array` | `''` | Disable certain dates. Each date must be in `yyyy-mm-dd` format. Can be comma-separated string or array of dates e.g., `"2023-12-25,2024-01-01"` or `["2023-12-25", "2024-01-01"]`.
 
