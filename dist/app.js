@@ -7648,7 +7648,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * vue-datetime-extended v1.0.2
+ * vue-datetime-extended v1.0.3
  * (c) 2023 Sudipto Choudhury
  * Released under the MIT License.
  */
@@ -8679,7 +8679,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     window.Vue.use(plugin);
   }
 
-  var version = '1.0.2';
+  var version = '1.0.3';
 
   exports['default'] = plugin;
   exports.Datetime = Datetime;
@@ -19483,8 +19483,6 @@ var _luxon = __webpack_require__(0);
 
 var _vueDatetimeExtended = __webpack_require__(5);
 
-var _vueDatetimeExtended2 = _interopRequireDefault(_vueDatetimeExtended);
-
 __webpack_require__(7);
 
 __webpack_require__(6);
@@ -19492,7 +19490,6 @@ __webpack_require__(6);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _luxon.Settings.defaultLocale = 'es';
-_vue2.default.use(_vueDatetimeExtended2.default);
 
 var mainDate = _luxon.DateTime.local();
 var date = mainDate.startOf('day').toISO();
@@ -19503,7 +19500,7 @@ var datetime13 = mainDate.toISO();
 
 new _vue2.default({
   el: '#app',
-
+  components: { Datetime: _vueDatetimeExtended.Datetime },
   data: function data() {
     return {
       time: time,
